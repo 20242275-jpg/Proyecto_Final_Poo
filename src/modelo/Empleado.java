@@ -1,17 +1,15 @@
 
 package modelo;
 
-public class Empleado extends Persona {
+public abstract class Empleado extends Persona {
     
     private String usuario;
     private String password;
-    private String rol;
 
-    public Empleado(String usuario, String password, String rol, String dni, String nombre, String apellido) {
+    public Empleado(String usuario, String password, String dni, String nombre, String apellido) {
         super(dni, nombre, apellido);
         this.usuario = usuario;
         this.password = password;
-        this.rol = rol;
     }
 
     public String getUsuario() {
@@ -29,19 +27,13 @@ public class Empleado extends Persona {
     public void setPassword(String password) {
         this.password = password;
     }
-
+    //El rol ahora se obtiene por polimorfismo
     public String getRol() {
-        return rol;
-    }
-
-    public void setRol(String rol) {
-        this.rol = rol;
+    return conseguirTipo();
     }
 
     @Override
-    public String conseguirTipo() {
-        return "Empleado";
-    }
+    public abstract String conseguirTipo();
     
     
 }

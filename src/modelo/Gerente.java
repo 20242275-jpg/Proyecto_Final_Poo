@@ -10,8 +10,8 @@ package modelo;
  */
 public class Gerente extends Empleado{
 
-    public Gerente(String usuario, String password, String rol, String dni, String nombre, String apellido) {
-        super(usuario, password, "Gerente", dni, nombre, apellido);
+    public Gerente(String usuario, String password, String dni, String nombre, String apellido) {
+        super(usuario, password, dni, nombre, apellido);
     }
 
     @Override

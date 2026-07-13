@@ -1,13 +1,13 @@
 
 package datos;
 
-import modelo.Empleado;
+import modelo.Administrador;
 
 public class Inicializador {
     
     public static void cargarDatos(){
         
-        Empleado admin = new Empleado( "12345678", "Administrador", "General", "admin", "123", "Administrador");
+        Administrador admin = new Administrador( "admin", "123", "12345678", "Administrador", "General");
         
         BaseDatosMemoria.registrarEmpleado(admin);
     }
