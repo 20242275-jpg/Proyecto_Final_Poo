@@ -12,7 +12,7 @@ public abstract class Persona {
         this.nombre = nombre;
         this.apellido = apellido;
     }
-
+    
     public String getDni() {
         return dni;
     }
@@ -34,14 +34,22 @@ public abstract class Persona {
     }
 
     public void setApellido(String apellido) {
-        this.apellido = apellido;
+        this.apellido = apellido;   
+    }
+    public String getNombreCompleto() {
+    return nombre + " " + apellido;
     }
     
     public abstract String conseguirTipo();
     
     public void mostrarDatos(){
 
-      imprimir("DNI: "+dni+"\nNombre: "+nombre+" "+apellido);
+    imprimir(
+        "DNI: " + dni + 
+        "\nNombre: " + getNombreCompleto() +
+        "\nTipo: " + conseguirTipo()
+    );
+
     }
     public void imprimir(String cadena){
         System.out.println(cadena);
