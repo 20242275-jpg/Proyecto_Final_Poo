@@ -31,6 +31,7 @@ public abstract class Empleado extends Persona {
     public String getRol() {
     return conseguirTipo();
     }
+    
 
     @Override
     public abstract String conseguirTipo();
