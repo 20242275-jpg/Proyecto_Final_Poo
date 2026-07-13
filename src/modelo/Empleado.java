@@ -27,7 +27,7 @@ public abstract class Empleado extends Persona {
     public void setPassword(String password) {
         this.password = password;
     }
-    //El rol ahora se obtiene por polimorfismo
+    
     public String getRol() {
     return conseguirTipo();
     }
